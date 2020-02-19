@@ -6,7 +6,10 @@ def nothing(x):
     pass
 
 # Load in image
+ratio = 0.5  # resize ratio
+
 image = cv2.imread('../9. perspective/images/original.jpg', cv2.IMREAD_COLOR)
+image = cv2.resize(image, (0, 0), None, ratio, ratio)  # resize image
 
 # Create a window
 cv2.namedWindow('image')
